@@ -11,7 +11,7 @@ const Footer: React.FC = () => {
   };
 
   return (
-    <footer className="bg-[#050505] text-white relative overflow-hidden" data-aos="fade-up">
+    <footer className="bg-[#050505] text-white relative overflow-hidden">
       {/* BACKGROUND WATERMARK */}
       <div className="absolute top-0 left-0 w-full h-full pointer-events-none overflow-hidden select-none">
           <h1 className="text-[20vw] font-serif font-bold text-white/[0.02] whitespace-nowrap leading-none absolute -bottom-10 left-1/2 transform -translate-x-1/2">

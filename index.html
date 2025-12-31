@@ -6,8 +6,6 @@
     <title>Zenthera Groups | Innovate. Design. Build.</title>
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%230a0a0a'/%3E%3Cpath d='M44 16H20L16 48H28L44 16Z' fill='%23c5a059'/%3E%3Cpath d='M36 16H48L44 48H32L36 16Z' fill='%23ffffff'/%3E%3C/svg%3E" type="image/svg+xml" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- AOS Animation Library -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,29 +27,22 @@
               }
             },
             keyframes: {
-              fadeInUp: {
-                '0%': { opacity: '0', transform: 'translateY(20px)' },
-                '100%': { opacity: '1', transform: 'translateY(0)' },
-              },
               fadeIn: {
                 '0%': { opacity: '0' },
                 '100%': { opacity: '1' },
               }
             },
             animation: {
-              'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
-              'fade-in': 'fadeIn 1s ease-out forwards',
+              'fade-in': 'fadeIn 0.5s ease-out forwards',
             }
           }
         }
       }
     </script>
     <style>
-      /* Smooth scrolling for anchor links */
       html {
         scroll-behavior: smooth;
       }
-      /* Hide scrollbar for cleaner look in some browsers */
       ::-webkit-scrollbar {
         width: 8px;
       }
@@ -83,7 +74,5 @@
 </head>
   <body class="bg-white text-slate-900 antialiased">
     <div id="root"></div>
-    <!-- AOS JS -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   </body>
 </html>

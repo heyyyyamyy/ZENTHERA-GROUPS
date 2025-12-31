@@ -41,9 +41,9 @@ const About: React.FC = () => {
       {/* SECTION 1: HERO / LEGACY */}
       <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div className="relative" data-aos="fade-right" data-aos-duration="1200">
+            <div className="relative">
                 <img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=800&q=80" alt="Engineers at work" className="w-full h-auto object-cover grayscale hover:grayscale-0 transition-all duration-700 shadow-xl" />
-                <div className="absolute -bottom-10 -right-10 w-48 h-48 bg-zenthera-gold hidden md:flex items-center justify-center p-4 shadow-lg" data-aos="zoom-in" data-aos-delay="400">
+                <div className="absolute -bottom-10 -right-10 w-48 h-48 bg-zenthera-gold hidden md:flex items-center justify-center p-4 shadow-lg">
                      <p className="text-white font-serif text-center text-lg leading-tight">
                          <span className="text-5xl block font-bold mb-2">40+</span>
                          Years of Power
@@ -51,7 +51,7 @@ const About: React.FC = () => {
                 </div>
             </div>
             
-            <div data-aos="fade-left" data-aos-duration="1200">
+            <div>
                 <span className="text-zenthera-gold text-sm uppercase tracking-widest font-bold mb-4 block">Our Legacy</span>
                 <h1 className="font-serif text-5xl md:text-6xl mb-8 leading-tight">Building the backbone of global energy.</h1>
                 <div className="space-y-6 text-gray-600 text-lg leading-relaxed">
@@ -69,13 +69,13 @@ const About: React.FC = () => {
       {/* SECTION 2: CORE VALUES */}
       <section className="bg-zenthera-dark text-white py-24">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-              <div className="text-center mb-16" data-aos="fade-up">
+              <div className="text-center mb-16">
                   <span className="text-zenthera-gold text-sm uppercase tracking-widest font-bold">The Zenthera Way</span>
                   <h2 className="font-serif text-4xl mt-4">Our Core Values</h2>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
                   {values.map((v, i) => (
-                      <div key={i} className="text-center group" data-aos="zoom-in" data-aos-delay={i * 100}>
+                      <div key={i} className="text-center group">
                           <div className="inline-block p-6 border border-gray-700 rounded-full mb-6 group-hover:border-zenthera-gold transition-colors duration-300">
                               <v.icon size={32} className="text-zenthera-gold" />
                           </div>
@@ -90,14 +90,14 @@ const About: React.FC = () => {
       {/* SECTION 3: TIMELINE */}
       <section className="py-24 bg-zenthera-light">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-              <h2 className="font-serif text-4xl text-center mb-16" data-aos="fade-up">Decades of Excellence</h2>
+              <h2 className="font-serif text-4xl text-center mb-16">Decades of Excellence</h2>
               <div className="relative">
                   {/* Vertical Line */}
                   <div className="absolute left-[15px] md:left-1/2 top-0 bottom-0 w-0.5 bg-gray-300 transform md:-translate-x-1/2"></div>
                   
                   <div className="space-y-12">
                     {timeline.map((item, idx) => (
-                        <div key={idx} className="relative pl-12 md:pl-0 md:flex items-center justify-between group" data-aos={idx % 2 === 0 ? "fade-right" : "fade-left"}>
+                        <div key={idx} className="relative pl-12 md:pl-0 md:flex items-center justify-between group">
                             {/* Dot */}
                             <div className="absolute left-[7px] top-2 md:top-1/2 md:-mt-2 w-4 h-4 rounded-full bg-zenthera-gold border-4 border-white md:left-1/2 md:-translate-x-1/2 z-10"></div>
                             
@@ -120,13 +120,13 @@ const About: React.FC = () => {
       {/* SECTION 4: LEADERSHIP */}
       <section className="py-24 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-              <div className="text-center mb-16" data-aos="fade-up">
+              <div className="text-center mb-16">
                   <h2 className="font-serif text-4xl mb-6">Our Leadership</h2>
                   <p className="text-gray-600 max-w-2xl mx-auto">Guided by visionaries with decades of experience in the global energy infrastructure landscape.</p>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                   {leaders.map((leader, i) => (
-                      <div key={i} className="group" data-aos="fade-up" data-aos-delay={i * 100}>
+                      <div key={i} className="group">
                           <div className="overflow-hidden mb-6 aspect-[3/4]">
                               <img src={leader.img} alt={leader.name} className="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-105 filter grayscale group-hover:grayscale-0" />
                           </div>
@@ -146,23 +146,23 @@ const About: React.FC = () => {
                <div className="absolute bottom-10 right-10 w-96 h-96 rounded-full border-2 border-white"></div>
           </div>
           
-          <div className="max-w-7xl mx-auto px-4 relative z-10 text-center" data-aos="zoom-in-up">
+          <div className="max-w-7xl mx-auto px-4 relative z-10 text-center">
               <Globe size={48} className="text-zenthera-gold mx-auto mb-8" />
               <h2 className="font-serif text-4xl md:text-5xl mb-12">Global Footprint</h2>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-                  <div data-aos="fade-up" data-aos-delay="0">
+                  <div>
                       <h4 className="text-2xl font-bold mb-2">Houston</h4>
                       <p className="text-gray-400 text-xs uppercase tracking-widest">Global HQ</p>
                   </div>
-                  <div data-aos="fade-up" data-aos-delay="100">
+                  <div>
                       <h4 className="text-2xl font-bold mb-2">London</h4>
                       <p className="text-gray-400 text-xs uppercase tracking-widest">Europe Operations</p>
                   </div>
-                   <div data-aos="fade-up" data-aos-delay="200">
+                   <div>
                       <h4 className="text-2xl font-bold mb-2">Dubai</h4>
                       <p className="text-gray-400 text-xs uppercase tracking-widest">Middle East Hub</p>
                   </div>
-                   <div data-aos="fade-up" data-aos-delay="300">
+                   <div>
                       <h4 className="text-2xl font-bold mb-2">Singapore</h4>
                       <p className="text-gray-400 text-xs uppercase tracking-widest">Asia Pacific</p>
                   </div>
@@ -172,7 +172,7 @@ const About: React.FC = () => {
 
        {/* SECTION 6: CERTIFICATIONS */}
        <section className="py-16 border-t border-gray-100 bg-white">
-           <div className="max-w-7xl mx-auto px-4 flex flex-wrap justify-center gap-12 md:gap-24 opacity-50 grayscale hover:grayscale-0 transition-all duration-500" data-aos="fade-in">
+           <div className="max-w-7xl mx-auto px-4 flex flex-wrap justify-center gap-12 md:gap-24 opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
                <div className="flex items-center gap-2">
                    <Award size={32} /> <span className="font-bold text-xl">ISO 9001</span>
                </div>

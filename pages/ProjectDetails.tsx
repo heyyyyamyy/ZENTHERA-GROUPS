@@ -36,7 +36,7 @@ const ProjectDetails: React.FC = () => {
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
-        <div className="absolute bottom-0 left-0 w-full p-8 md:p-16 text-white" data-aos="fade-up">
+        <div className="absolute bottom-0 left-0 w-full p-8 md:p-16 text-white">
             <div className="max-w-7xl mx-auto">
                 <Link to="/projects" className="inline-flex items-center gap-2 text-gray-300 hover:text-white mb-6 text-sm uppercase tracking-widest transition-colors">
                     <ArrowLeft size={16} /> Back to Projects
@@ -51,7 +51,7 @@ const ProjectDetails: React.FC = () => {
       {/* SECTION 2: OVERVIEW & STATS */}
       <section className="py-20 md:py-28 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-16">
-            <div className="lg:col-span-2" data-aos="fade-right">
+            <div className="lg:col-span-2">
                 <h2 className="font-serif text-4xl mb-6">Executive Summary</h2>
                 <p className="text-gray-600 leading-relaxed text-lg mb-8">
                     {project.title} represents a benchmark in modern construction within the {project.category} sector. 
@@ -63,7 +63,7 @@ const ProjectDetails: React.FC = () => {
                 </p>
             </div>
             
-            <div className="bg-gray-50 p-8 border-l-4 border-zenthera-gold h-fit" data-aos="fade-left">
+            <div className="bg-gray-50 p-8 border-l-4 border-zenthera-gold h-fit">
                 <h3 className="font-serif text-2xl mb-6">Project Data</h3>
                 <div className="space-y-6">
                     <div className="flex items-start gap-4">
@@ -103,7 +103,7 @@ const ProjectDetails: React.FC = () => {
       <section className="py-24 bg-zenthera-dark text-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
-                  <div data-aos="fade-right">
+                  <div>
                       <span className="text-zenthera-gold text-sm uppercase tracking-widest font-bold mb-4 block">The Challenge</span>
                       <h2 className="font-serif text-3xl md:text-4xl mb-6">Navigating Complexity</h2>
                       <p className="text-gray-400 text-lg leading-relaxed">
@@ -117,7 +117,7 @@ const ProjectDetails: React.FC = () => {
                       </div>
                   </div>
                   
-                  <div data-aos="fade-left">
+                  <div>
                       <span className="text-green-500 text-sm uppercase tracking-widest font-bold mb-4 block">Our Solution</span>
                       <h2 className="font-serif text-3xl md:text-4xl mb-6">Engineered Precision</h2>
                       <p className="text-gray-400 text-lg leading-relaxed mb-6">
@@ -145,19 +145,19 @@ const ProjectDetails: React.FC = () => {
       {/* SECTION 4: GALLERY */}
       <section className="py-24 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-               <h2 className="font-serif text-4xl mb-12 text-center" data-aos="fade-up">Site Progress</h2>
+               <h2 className="font-serif text-4xl mb-12 text-center">Site Progress</h2>
                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 h-[600px] md:h-[400px]">
-                   <div className="col-span-1 md:col-span-2 h-full rounded-lg overflow-hidden relative group" data-aos="zoom-in">
+                   <div className="col-span-1 md:col-span-2 h-full rounded-lg overflow-hidden relative group">
                        <img src={project.image} alt="Site Main" className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" />
                        <div className="absolute bottom-4 left-4 bg-black/50 px-4 py-2 text-white text-xs uppercase">Phase 1: Construction</div>
                    </div>
                    <div className="flex flex-col gap-6 h-full">
-                       <div className="h-1/2 rounded-lg overflow-hidden relative group" data-aos="zoom-in" data-aos-delay="100">
+                       <div className="h-1/2 rounded-lg overflow-hidden relative group">
                             {/* Placeholder for secondary images, reusing main for demo with different crop/filter */}
                             <img src={project.image} alt="Detail 1" className="w-full h-full object-cover scale-150 grayscale group-hover:grayscale-0 transition-all duration-700" />
                             <div className="absolute bottom-4 left-4 bg-black/50 px-4 py-2 text-white text-xs uppercase">Detail Engineering</div>
                        </div>
-                       <div className="h-1/2 rounded-lg overflow-hidden relative group" data-aos="zoom-in" data-aos-delay="200">
+                       <div className="h-1/2 rounded-lg overflow-hidden relative group">
                             <img src={project.image} alt="Detail 2" className="w-full h-full object-cover scale-125 grayscale group-hover:grayscale-0 transition-all duration-700" />
                             <div className="absolute bottom-4 left-4 bg-black/50 px-4 py-2 text-white text-xs uppercase">Final Handover</div>
                        </div>
@@ -168,7 +168,7 @@ const ProjectDetails: React.FC = () => {
 
       {/* SECTION 5: IMPACT */}
       <section className="py-20 bg-zenthera-light">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center" data-aos="fade-up">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
               <div className="inline-block p-4 rounded-full bg-green-100 mb-6">
                   <Leaf className="text-green-700" size={32} />
               </div>

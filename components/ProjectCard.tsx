@@ -9,35 +9,38 @@ interface ProjectCardProps {
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
   return (
-    <div className="group relative overflow-hidden cursor-pointer">
-      {/* Image Container */}
-      <div className="aspect-[4/5] overflow-hidden bg-gray-200">
+    <div className="group block h-full">
+      <div className="relative overflow-hidden aspect-[4/5] bg-gray-200 mb-4">
+        {/* Image */}
         <img 
           src={project.image} 
           alt={project.title} 
-          className="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-110"
+          className="w-full h-full object-cover transform transition-transform duration-700 ease-out group-hover:scale-105"
         />
+        
+        {/* Overlay Action */}
+        <Link 
+          to={`/projects/${project.id}`}
+          className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"
+        >
+          <div className="w-16 h-16 rounded-full bg-white text-black flex items-center justify-center transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+            <ArrowUpRight size={24} />
+          </div>
+        </Link>
       </div>
       
-      {/* Overlay Content */}
-      <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-300 flex flex-col justify-end p-8">
-        <div className="transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
-           <span className="text-zenthera-gold text-xs uppercase tracking-widest font-bold mb-2 block">
+      {/* Content Below Image (Clean Style) */}
+      <div>
+        <div className="flex items-center gap-3 mb-2">
+           <div className="h-[1px] w-8 bg-zenthera-gold"></div>
+           <span className="text-zenthera-gold text-xs uppercase tracking-widest font-bold">
             {project.category}
           </span>
-          <h3 className="text-white font-serif text-2xl mb-4">{project.title}</h3>
-          <Link 
-            to={`/projects/${project.id}`}
-            className="flex items-center gap-2 text-white text-sm uppercase tracking-wider hover:text-zenthera-gold transition-colors"
-          >
-            View Project <ArrowUpRight size={16} />
-          </Link>
         </div>
-      </div>
-
-      {/* Static Title (Visible when not hovering - Mobile friendly) */}
-      <div className="absolute bottom-0 left-0 p-6 bg-gradient-to-t from-black/80 to-transparent w-full md:hidden">
-         <h3 className="text-white font-serif text-xl">{project.title}</h3>
+        <h3 className="text-zenthera-dark font-serif text-2xl group-hover:text-gray-600 transition-colors">
+          <Link to={`/projects/${project.id}`}>{project.title}</Link>
+        </h3>
+        <p className="text-gray-500 text-sm mt-2 line-clamp-2">{project.description}</p>
       </div>
     </div>
   );

@@ -56,7 +56,7 @@ const Careers: React.FC = () => {
       {/* Hero Section */}
       <div className="bg-zenthera-dark text-white py-20 px-4">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="max-w-3xl" data-aos="fade-right">
+            <div className="max-w-3xl">
                 <span className="text-zenthera-gold text-sm uppercase tracking-widest font-bold mb-4 block">Work With Us</span>
                 <h1 className="font-serif text-5xl md:text-6xl mb-6">Engineer the extraordinary.</h1>
                 <p className="text-gray-400 text-lg mb-8">We are recruiting top-tier talent in engineering, safety, and project management to solve the world's most complex energy challenges.</p>
@@ -78,7 +78,7 @@ const Careers: React.FC = () => {
 
       {/* Job Listings */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <div className="flex justify-between items-end mb-8" data-aos="fade-up">
+        <div className="flex justify-between items-end mb-8">
             <h2 className="font-serif text-3xl text-zenthera-dark">Current Openings</h2>
             <span className="text-sm text-gray-500 font-bold">{filteredJobs.length} Positions Available</span>
         </div>
@@ -86,7 +86,7 @@ const Careers: React.FC = () => {
         <div className="grid grid-cols-1 gap-4">
             {filteredJobs.length > 0 ? (
                 filteredJobs.map((job, idx) => (
-                    <div key={job.id} className="border border-gray-200 p-6 md:p-8 flex flex-col md:flex-row justify-between items-center group hover:border-zenthera-gold hover:shadow-md transition-all duration-300 bg-white" data-aos="fade-up" data-aos-delay={idx * 50}>
+                    <div key={job.id} className="border border-gray-200 p-6 md:p-8 flex flex-col md:flex-row justify-between items-center group hover:border-zenthera-gold hover:shadow-md transition-all duration-300 bg-white">
                         <div className="mb-4 md:mb-0 w-full md:w-auto">
                             <h3 className="font-serif text-xl md:text-2xl mb-2 text-zenthera-dark group-hover:text-zenthera-gold transition-colors">{job.title}</h3>
                             <div className="flex flex-wrap gap-4 text-sm text-gray-500">
@@ -104,7 +104,7 @@ const Careers: React.FC = () => {
                     </div>
                 ))
             ) : (
-                <div className="text-center py-12 text-gray-500" data-aos="zoom-in">
+                <div className="text-center py-12 text-gray-500">
                     No jobs found matching your criteria.
                 </div>
             )}
@@ -114,7 +114,7 @@ const Careers: React.FC = () => {
       {/* Application Form Section */}
       <div ref={formRef} className="bg-zenthera-light py-24">
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-              <div className="bg-white p-8 md:p-12 shadow-xl border-t-4 border-zenthera-gold" data-aos="fade-up">
+              <div className="bg-white p-8 md:p-12 shadow-xl border-t-4 border-zenthera-gold">
                   <h2 className="font-serif text-3xl mb-2 text-zenthera-dark">Job Application</h2>
                   <p className="text-gray-600 mb-8">Submit your credentials. If your profile matches our requirements, our HR team will contact you.</p>
                   

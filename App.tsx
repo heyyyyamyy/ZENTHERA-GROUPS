@@ -11,38 +11,22 @@ import Contact from './pages/Contact';
 import Quote from './pages/Quote';
 import ProjectDetails from './pages/ProjectDetails';
 
+// Handles scrolling to top on route change
 const ScrollToTop = () => {
   const { pathname } = useLocation();
+
   useEffect(() => {
     window.scrollTo(0, 0);
-    // Refresh AOS animations when route changes
-    if ((window as any).AOS) {
-      setTimeout(() => {
-        (window as any).AOS.refresh();
-      }, 100);
-    }
   }, [pathname]);
+
   return null;
 };
 
 const App: React.FC = () => {
-  useEffect(() => {
-    // Initialize AOS
-    if ((window as any).AOS) {
-      (window as any).AOS.init({
-        duration: 1000,
-        easing: 'ease-out-cubic',
-        once: true, // Whether animation should happen only once - while scrolling down
-        offset: 50, // Offset (in px) from the original trigger point
-        delay: 50, // values from 0 to 3000, with step 50ms
-      });
-    }
-  }, []);
-
   return (
     <Router>
       <ScrollToTop />
-      <div className="flex flex-col min-h-screen overflow-x-hidden">
+      <div className="flex flex-col min-h-screen bg-white text-slate-900 font-sans selection:bg-zenthera-gold selection:text-white">
         <Navbar />
         <main className="flex-grow">
           <Routes>
