@@ -50,7 +50,7 @@ const Navbar: React.FC = () => {
     <>
       <nav 
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-in-out ${
-          scrolled ? 'py-4' : 'py-6 md:py-8'
+          scrolled ? 'py-3' : 'py-4 md:py-6'
         }`}
       >
         <div className="flex justify-center px-4">
@@ -58,7 +58,7 @@ const Navbar: React.FC = () => {
             className={`
               relative flex justify-between items-center transition-all duration-500 w-full max-w-7xl
               ${scrolled 
-                ? 'bg-[#0a0a0a]/95 backdrop-blur-md rounded-full px-6 py-3 border border-white/10 shadow-2xl' 
+                ? 'bg-[#0a0a0a]/95 backdrop-blur-md rounded-full px-6 py-2 border border-white/10 shadow-2xl' 
                 : 'bg-transparent px-0'
               }
             `}
@@ -68,7 +68,7 @@ const Navbar: React.FC = () => {
                <img 
                  src={needsWhiteLogo ? logoWhiteUrl : logoDarkUrl} 
                  alt="Zenthera Groups" 
-                 className="h-8 md:h-10 w-auto object-contain transition-all duration-300" 
+                 className="h-8 md:h-9 w-auto object-contain transition-all duration-300" 
                />
             </Link>
 
@@ -79,7 +79,7 @@ const Navbar: React.FC = () => {
                   <Link
                     key={item.path}
                     to={item.path}
-                    className="ml-4 bg-zenthera-gold text-black px-6 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider hover:bg-white transition-all duration-300 flex items-center gap-2 transform hover:-translate-y-0.5 shadow-lg shadow-zenthera-gold/20"
+                    className="ml-4 bg-zenthera-gold text-black px-5 py-2 rounded-full text-xs font-bold uppercase tracking-wider hover:bg-white transition-all duration-300 flex items-center gap-2 transform hover:-translate-y-0.5 shadow-lg shadow-zenthera-gold/20"
                   >
                     {item.label}
                     <ArrowRight size={14} />
@@ -88,7 +88,7 @@ const Navbar: React.FC = () => {
                   <Link
                     key={item.path}
                     to={item.path}
-                    className={`px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-widest transition-all duration-300 relative group overflow-hidden ${
+                    className={`px-4 py-2 rounded-full text-xs font-bold uppercase tracking-widest transition-all duration-300 relative group overflow-hidden ${
                       location.pathname === item.path 
                         ? (needsWhiteLogo ? 'text-white' : 'text-black font-extrabold')
                         : (needsWhiteLogo ? 'text-gray-300 hover:text-white' : 'text-gray-600 hover:text-black')

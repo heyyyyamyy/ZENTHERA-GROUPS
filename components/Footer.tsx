@@ -1,5 +1,5 @@
 import React from 'react';
-import { Facebook, Twitter, Instagram, Linkedin, ArrowUp, Send, CheckCircle2 } from 'lucide-react';
+import { Instagram, Linkedin, ArrowUp, Send, CheckCircle2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 // Logo adapted for dark background (White text/shapes instead of black)
@@ -51,7 +51,7 @@ const Footer: React.FC = () => {
                 </p>
             </div>
             <div className="flex gap-4">
-               {[Facebook, Twitter, Instagram, Linkedin].map((Icon, idx) => (
+               {[Instagram, Linkedin].map((Icon, idx) => (
                     <a key={idx} href="#" className="w-10 h-10 border border-white/10 flex items-center justify-center hover:bg-zenthera-gold hover:border-zenthera-gold hover:text-black transition-all duration-300">
                         <Icon size={18} />
                     </a>

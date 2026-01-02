@@ -163,7 +163,7 @@ const About: React.FC = () => {
                       <p className="text-gray-400 text-xs uppercase tracking-widest">Middle East Hub</p>
                   </div>
                    <div>
-                      <h4 className="text-2xl font-bold mb-2">Singapore</h4>
+                      <h4 className="text-2xl font-bold mb-2">Visakhapatnam</h4>
                       <p className="text-gray-400 text-xs uppercase tracking-widest">Asia Pacific</p>
                   </div>
               </div>

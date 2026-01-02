@@ -142,30 +142,6 @@ const ProjectDetails: React.FC = () => {
           </div>
       </section>
 
-      {/* SECTION 4: GALLERY */}
-      <section className="py-24 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-               <h2 className="font-serif text-4xl mb-12 text-center">Site Progress</h2>
-               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 h-[600px] md:h-[400px]">
-                   <div className="col-span-1 md:col-span-2 h-full rounded-lg overflow-hidden relative group">
-                       <img src={project.image} alt="Site Main" className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" />
-                       <div className="absolute bottom-4 left-4 bg-black/50 px-4 py-2 text-white text-xs uppercase">Phase 1: Construction</div>
-                   </div>
-                   <div className="flex flex-col gap-6 h-full">
-                       <div className="h-1/2 rounded-lg overflow-hidden relative group">
-                            {/* Placeholder for secondary images, reusing main for demo with different crop/filter */}
-                            <img src={project.image} alt="Detail 1" className="w-full h-full object-cover scale-150 grayscale group-hover:grayscale-0 transition-all duration-700" />
-                            <div className="absolute bottom-4 left-4 bg-black/50 px-4 py-2 text-white text-xs uppercase">Detail Engineering</div>
-                       </div>
-                       <div className="h-1/2 rounded-lg overflow-hidden relative group">
-                            <img src={project.image} alt="Detail 2" className="w-full h-full object-cover scale-125 grayscale group-hover:grayscale-0 transition-all duration-700" />
-                            <div className="absolute bottom-4 left-4 bg-black/50 px-4 py-2 text-white text-xs uppercase">Final Handover</div>
-                       </div>
-                   </div>
-               </div>
-          </div>
-      </section>
-
       {/* SECTION 5: IMPACT */}
       <section className="py-20 bg-zenthera-light">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
